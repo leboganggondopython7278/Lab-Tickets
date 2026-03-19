@@ -29,35 +29,116 @@ Used Google Gemini to help understand the project brief, clarify what RAG and Ag
 ---
 
 ## 🗓️ Week 4 — Loops & Multiple Transactions
-**Date:** *(to be completed)*
-**AI Tools Used:** Google Gemini
+🗓️ Week 4 — Loops & Multiple Transactions
 
-**Goal:** Add loops to handle multiple expenses in one session.
+Date: 17 March 2026
+AI Tools Used: ChatGPT (OpenAI) and Google Gemini
 
-**Artifact:** *(add screenshot or code snippet here)*
+Goal:
+Add loops to handle multiple expenses in one session.
 
-**Context:** *(one sentence — what were you trying to do?)*
+Artifact:
+while True:
+    expense_input = input("[CELESTI] Expense amount (or 'done'): $")
+    if expense_input.lower() == 'done':
+        break
+    try:
+        amount = float(expense_input)
+        expenses.append(amount)
+        total_spent += amount
+    except ValueError:
+        print("CELESTI says: Invalid amount!")
 
-**Reflection:** *(what worked, what didn't, what you learned)*
+Context:
+I was trying to build a loop that collects multiple 
+expenses and stops when the user types done.
 
-**GitHub Commit:** *(paste your commit message here)*
+Reflection:
+What worked:
+Before this week I froze when I saw code and did not 
+know where to start. Breaking the problem into smaller 
+pieces helped me understand each part separately before 
+putting it all together. I found it helpful to think of 
+the loop like a cashier scanning items — they keep going 
+until the customer says they are finished.
 
+What did not work:
+ChatGPT code sometimes had indentation errors and did 
+not run properly the first time. I used Gemini to cross 
+check the code which helped me find the mistakes. I 
+learned not to rely on one AI tool alone.
+
+What I learned:
+While loops keep running when you do not know how many 
+times to repeat. For loops are better when you know 
+the exact number. Storing expenses in lists instead of 
+one variable made it possible to analyse, search and 
+summarise all transactions — which connects directly 
+to my Budget Buddy project.
+
+GitHub Commit:
+Week 4 - Added loop-powered CELESTI Finance Tracker 
+with input validation and interactive menu
 ---
 
 ## 🗓️ Week 5 — Data Storage & CSV Files
-**Date:** *(to be completed)*
-**AI Tools Used:** Google Gemini
+🗓️ Week 5 — Functions & Modular Design
 
-**Goal:** Add file reading and writing so the Finance Tracker can save and load expense data from a CSV file.
+Date: 19 March 2026
+AI Tools Used: ChatGPT (OpenAI) and Google Gemini
 
-**Artifact:** *(add screenshot or code snippet here)*
+Goal:
+Learn how to break code into functions and use the 
+pyinputplus library for better input validation.
 
-**Context:** *(one sentence — what were you trying to do?)*
+Artifact:
+import pyinputplus as pyip
 
-**Reflection:** *(what worked, what didn't, what you learned)*
+def get_number(prompt):
+    return pyip.inputFloat(prompt)
 
-**GitHub Commit:** *(paste your commit message here)*
+def perform_calculation(operation, num1, num2):
+    if operation == "1":
+        return add(num1, num2)
+    elif operation == "2":
+        return subtract(num1, num2)
 
+Context:
+I was trying to break a calculator into separate 
+functions where each function has one job, and replace 
+manual input validation with pyinputplus.
+
+Reflection:
+What worked:
+I used to freeze when I saw code but this week 
+something clicked. Three analogies helped me understand 
+functions — the restaurant where each staff member has 
+one role, the recipe written once and used many times, 
+and the SAP module testing where you test each part 
+separately before combining. These real life examples 
+made the concepts stick. pyinputplus also impressed me 
+because it replaced 7 lines of manual validation with 
+just 1 line.
+
+What did not work:
+Seeing the full code all at once still caused 
+confusion. Working through one blank at a time with 
+hints was much more effective than reading complete 
+code blocks. I need to continue practising reading 
+code incrementally.
+
+What I learned:
+Six keywords are the foundation of functions — def 
+creates them, return sends answers back, print shows 
+output, input collects user input, float converts text 
+to numbers, and if/elif checks conditions. Modular 
+design means each function has one job which makes 
+debugging easier — just like testing SAP modules 
+separately before going live.
+
+GitHub Commit:
+Week 5 - Added modular calculator with pyinputplus 
+for better input validation
 ---
 
 ## 🗓️ Week 8 — AI Integration Begins ⭐ EVIDENCE PACKAGE REQUIRED
